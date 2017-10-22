@@ -10,6 +10,7 @@
 - long_consecutove_sequence
 - two_sum
 - 3sum_closest
+- next_permutation
 
 ### 单链表
 
