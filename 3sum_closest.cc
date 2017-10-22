@@ -1,0 +1,67 @@
+/*
+ * Copyright (c) 2015 xxxx Inc, All rights reserved.
+ * Created: 2017-10-22
+ */
+
+/*
+Given an array S of n integers, find three integers in S such that the sum is closest to a given number,
+target. Return the sum of the three integers. You may assume that each input would have exactly one solution.
+For example, given array S = {-1 2 1 -4}, and target = 1. 
+The sum that is closest to the target is 2. (-1+2+1=2).
+*/ 
+
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
+class Solution {
+public:
+	int threeSumClosest(vector<int> &nums, int target) {
+		int closest = nums[0] + nums[1] + nums[2];
+		int diff = abs(closest - target);
+
+		sort(nums.begin(), nums.end());
+
+		for ( int i = 0; i < nums.size() - 2; i++ ) {
+			int left = i + 1;
+			int right = nums.size() - 1;
+			
+			while ( left < right ) {
+				int sum = nums[i] + nums[left] + nums[right];
+				int new_diff = abs(sum - target);
+				if ( new_diff < diff ) {
+					diff = new_diff;
+					closest = sum;
+				}
+
+				/* nums已经排好序 */
+				if ( sum > target ) right--;
+				else left++;
+			}
+		}
+		return closest;
+	}
+};
+
+int main()
+{
+	vector<int> vec;
+	vec.push_back(-1);
+	vec.push_back(2);
+	vec.push_back(1);
+	vec.push_back(4);
+
+	for (auto i : vec )
+		cout << i << " ";
+	cout << endl;
+
+	int target = 1;
+	cout << "target: " << target << endl;
+
+	Solution solu;
+	int ret = solu.threeSumClosest(vec, target);
+	cout << "sum closest: " << ret << endl;
+
+	return 0;
+}
