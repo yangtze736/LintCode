@@ -8,6 +8,12 @@ Given an array S of n integers, find three integers in S such that the sum is cl
 target. Return the sum of the three integers. You may assume that each input would have exactly one solution.
 For example, given array S = {-1 2 1 -4}, and target = 1. 
 The sum that is closest to the target is 2. (-1+2+1=2).
+
+分析
+	先给数组排序，然后遍历数组，增加两个数组下标做夹逼
+	初始时左右下标left和right分别为i+1和nums.size()-1
+	如果三数之和大于target则right--，反之left++
+	使用最小abs(sum - target)更新closest并最终返回
 */ 
 
 #include <vector>
