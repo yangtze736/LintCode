@@ -13,6 +13,7 @@
 - next_permutation
 - trapping_rain_water
 - rotate_image
+- plus_one
 
 ### 单链表
 
