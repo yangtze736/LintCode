@@ -47,12 +47,8 @@ public:
 
 int main()
 {
-	vector<int> vec;
-	vec.push_back(-1);
-	vec.push_back(2);
-	vec.push_back(1);
-	vec.push_back(4);
-
+	int n[] = {-1,2,1,4};
+	vector<int> vec(n, n+sizeof(n)/sizeof(int));
 	for (auto i : vec )
 		cout << i << " ";
 	cout << endl;

@@ -49,17 +49,8 @@ class Solution {
 
 int main()
 {
-	vector<int> vec;
-	vec.push_back(1);
-	vec.push_back(1);
-	vec.push_back(2);
-	vec.push_back(2);
-	vec.push_back(3);
-	vec.push_back(5);
-	vec.push_back(5);
-	vec.push_back(7);
-	vec.push_back(8);
-	vec.push_back(9);
+	int n[] = {1,1,2,2,3,5,5,7,8,9};
+	vector<int> vec(n, n+sizeof(n)/sizeof(int));
 
 	for ( auto i : vec )	
 		cout << i << " ";

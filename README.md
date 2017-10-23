@@ -11,6 +11,8 @@
 - two_sum
 - 3sum_closest
 - next_permutation
+- trapping_rain_water
+- rotate_image
 
 ### 单链表
 
