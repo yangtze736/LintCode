@@ -62,6 +62,6 @@ int main()
   Solution solu;
   int n = 10;
   cout << "n numbers: " << n << endl;
-  cout << "fibonacci: " << solu.climStairs(n) << endl;
+  cout << "fibonacci: " << solu.climbStairs(n) << endl;
   return 0;
 }
