@@ -21,7 +21,7 @@ class Solution {
 public:
 	ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
 		ListNode *res = new ListNode(0);
-		ListNode *cur = NULL;
+		ListNode *cur = res;
 		int carry = 0;
 		while (l1 || l2) {
 			int n1 = l1 ? l1->val : 0;
@@ -29,10 +29,12 @@ public:
 			int sum = n1 + n2 + carry;
 			carry = sum / 10;
 			cur->val = sum % 10;
-			cur->next = new ListNode(0);
-			cur = cur->next;
 			if (l1) l1 = l1->next;
 			if (l2) l2 = l2->next;
+			if (l1 || l2) {
+				cur->next = new ListNode(0);
+				cur = cur->next;
+			}
 		}
 		//最高位进位
 		if (carry) cur->next = new ListNode(1);
@@ -44,7 +46,7 @@ int main()
 {
 	ListNode *p1 = new ListNode(2);
 	p1->next = new ListNode(4);
-	p1->next->next = new ListNode(3);
+	p1->next->next = new ListNode(8);
 
 	ListNode *p2 = new ListNode(5);
 	p2->next = new ListNode(6);
@@ -54,13 +56,15 @@ int main()
 	ListNode *ret = solu.addTwoNumbers(p1, p2);
 
 	ListNode *p = ret;
-	if(p->next != NULL) {
+	while (p != NULL) {
 		cout << p->val << " ";
 		p = p->next;
 	}
 	cout << endl;
 
-	// delete p1 p2 ret
-	// todo
+	while (p1 != NULL) {ListNode *p = p1; p1 = p1->next; delete p;}
+	while (p2 != NULL) {ListNode *p = p2; p2 = p2->next; delete p;}
+	while (ret != NULL) {ListNode *p = ret; ret = ret->next; delete p;}
+	
 	return 0;
 }

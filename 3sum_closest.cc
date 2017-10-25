@@ -13,6 +13,7 @@ The sum that is closest to the target is 2. (-1+2+1=2).
 
 #include <vector>
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
