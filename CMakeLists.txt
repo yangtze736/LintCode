@@ -6,6 +6,8 @@ set (CMAKE_BUILD_TYPE "Debug")
 set (CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -g2 -ggdb")  
 set (CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3")
 
+## 线性表
+### 数组
 add_executable (remove_duplicates_from_sorted_array remove_duplicates_from_sorted_array.cc)
 add_executable (long_consecutove_sequence long_consecutove_sequence.cc)
 add_executable (two_sum two_sum.cc)
@@ -21,4 +23,42 @@ add_executable (gas_station gas_station.cc)
 add_executable (candy candy.cc)
 add_executable (single_number single_number.cc)
 add_executable (single_number_1 single_number_1.cc)
+
+### 单链表
 add_executable (add_two_numbers add_two_numbers.cc)
+
+## 字符串
+
+## 栈和队列
+
+## 树
+
+### 二叉树的遍历
+
+### 二叉树的构建
+
+### 二叉查找树
+
+### 二叉树的递归
+
+## 排序
+
+## 查找
+add_executable (search_for_a_range search_for_a_range.cc)
+
+## 暴力枚举
+
+## 广度优先搜索
+
+## 深度优先搜索
+
+## 分治法
+
+## 贪心法
+
+## 动态规划
+
+## 图
+
+## 细节实现
+
