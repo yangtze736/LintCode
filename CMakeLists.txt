@@ -45,6 +45,8 @@ add_executable (add_two_numbers add_two_numbers.cc)
 
 ## 查找
 add_executable (search_for_a_range search_for_a_range.cc)
+add_executable (search_insert_position search_insert_position.cc)
+add_executable (search_a_2d_matrix search_a_2d_matrix.cc)
 
 ## 暴力枚举
 

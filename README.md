@@ -48,6 +48,8 @@
 ## 查找
 
 - search_for_a_range
+- search_insert_position
+- search_a_2d_matrix
 
 ## 暴力枚举
 
