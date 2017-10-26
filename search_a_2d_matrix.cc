@@ -30,13 +30,40 @@ using namespace std;
 class Solution {
 public:
 	bool searchMatrix(vector<vector<int>> &matrix, int target) {
-		bool ret = false;
-		cout << "target: " << target << endl;
+		if(matrix.empty() || matrix[0].empty()) return false;
+		if(target < matrix[0][0] || target > matrix.back().back()) return false;
 
-		int row = 0;
-		for( int i=0; i < matrix.size(); i++ ) {
-			if( matrix[i][0] > target ) break;
-			else row++;
+		int left = 0, right = matrix.size()-1;
+		while( left <= right ) {
+			int mid = (left+right)/2;
+			if( matrix[mid][0] == target) return true;
+			else if (matrix[mid][0] < target) left = mid + 1;
+			else right = mid - 1;
+		}
+		int tmp = right;
+		left = 0;
+		right = matrix[tmp].size() - 1;
+		while (left <= right) {
+			int mid = (left + right) / 2;
+			if (matrix[tmp][mid] == target) return true;
+			else if (matrix[tmp][mid] < target) left = mid + 1;
+			else right = mid - 1;
+		}
+		return false;
+	}
+};
+
+/*
+	 class Solution {
+	 public:
+	 bool searchMatrix(vector<vector<int>> &matrix, int target) {
+	 bool ret = false;
+	 cout << "target: " << target << endl;
+
+	 int row = 0;
+	 for( int i=0; i < matrix.size(); i++ ) {
+	 if( matrix[i][0] > target ) break;
+	 else row++;
 		}
 		for( int i=0; i < matrix[0].size(); i++ ) {
 			if( matrix[row-1][i] == target ) {
@@ -48,7 +75,7 @@ public:
 		return ret;
 	}
 };
-
+*/
 int main()
 {
 	int row[] = {1,3,5,7};
