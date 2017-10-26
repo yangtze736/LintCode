@@ -29,8 +29,32 @@ using namespace std;
 
 class Solution {
 public:
+	bool searchMatrix(vector<vector<int>> &matrix, int target ) {
+		if(matrix.empty()) return false;
+		if(target < matrix[0][0] || target > matrix.back().back()) return false;
+	
+		int m = matrix.size();
+		int n = matrix.front().size();
+		
+		int first = 0;
+		int last = m*n;
+
+		while(first <= last) {
+			int mid = first + (last-first)/2;
+			if( matrix[mid/n][mid%n] == target ) return true;
+			else if( matrix[mid/n][mid%n] < target ) first = mid+1;
+			else last = mid-1;
+		}
+
+		return false;
+	}
+};
+
+/*
+class Solution {
+public:
 	bool searchMatrix(vector<vector<int>> &matrix, int target) {
-		if(matrix.empty() || matrix[0].empty()) return false;
+		if(matrix.empty()) return false;
 		if(target < matrix[0][0] || target > matrix.back().back()) return false;
 
 		int left = 0, right = matrix.size()-1;
@@ -52,7 +76,7 @@ public:
 		return false;
 	}
 };
-
+*/
 /*
 	 class Solution {
 	 public:
@@ -90,7 +114,7 @@ int main()
 	matrix.push_back(v2);
 
 	Solution solu;
-	if ( solu.searchMatrix(matrix, 23) )
+	if ( solu.searchMatrix(matrix, 20) )
 		cout << "True" << endl;
 	else
 		cout << "False" << endl;
