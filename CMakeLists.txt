@@ -42,6 +42,7 @@ add_executable (add_two_numbers add_two_numbers.cc)
 ### 二叉树的递归
 
 ## 排序
+add_executable (merge_sorted_array merge_sorted_array.cc)
 
 ## 查找
 add_executable (search_for_a_range search_for_a_range.cc)

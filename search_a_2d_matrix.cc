@@ -20,6 +20,8 @@ Given target = 3, return true.
 	可以在第一列上先用一次二分查找法找到目标值所在的行的位置，然后在该行上再用一次二
 	分查找法来找是否存在目标值
 
+解法三
+. 使用一次二分查找，每次的中间值mid与二维数组之间的关系为nums[mid/n][mid%n]
  */
 
 #include<vector>
@@ -78,16 +80,16 @@ public:
 };
 */
 /*
-	 class Solution {
-	 public:
-	 bool searchMatrix(vector<vector<int>> &matrix, int target) {
-	 bool ret = false;
-	 cout << "target: " << target << endl;
+class Solution {
+public:
+	bool searchMatrix(vector<vector<int>> &matrix, int target) {
+		bool ret = false;
+		cout << "target: " << target << endl;
 
-	 int row = 0;
-	 for( int i=0; i < matrix.size(); i++ ) {
-	 if( matrix[i][0] > target ) break;
-	 else row++;
+		int row = 0;
+		for( int i=0; i < matrix.size(); i++ ) {
+			if( matrix[i][0] > target ) break;
+			else row++;
 		}
 		for( int i=0; i < matrix[0].size(); i++ ) {
 			if( matrix[row-1][i] == target ) {
@@ -95,7 +97,6 @@ public:
 				return true;
 			}
 		}
-
 		return ret;
 	}
 };

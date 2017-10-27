@@ -45,6 +45,8 @@
 
 ## 排序
 
+- merge_sorted_array
+
 ## 查找
 
 - search_for_a_range
