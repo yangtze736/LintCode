@@ -46,6 +46,7 @@
 ## 排序
 
 - merge_sorted_array
+- merge_two_sorted_lists
 
 ## 查找
 
