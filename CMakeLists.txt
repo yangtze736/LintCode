@@ -44,6 +44,7 @@ add_executable (add_two_numbers add_two_numbers.cc)
 ## 排序
 add_executable (merge_sorted_array merge_sorted_array.cc)
 add_executable (merge_two_sorted_lists merge_two_sorted_lists.cc)
+add_executable (merge_k_sorted_lists merge_k_sorted_lists.cc)
 
 ## 查找
 add_executable (search_for_a_range search_for_a_range.cc)

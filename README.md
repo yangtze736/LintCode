@@ -47,6 +47,7 @@
 
 - merge_sorted_array
 - merge_two_sorted_lists
+- merge_k_sorted_lists
 
 ## 查找
 
