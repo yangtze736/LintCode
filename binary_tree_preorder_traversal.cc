@@ -36,22 +36,22 @@ struct TreeNode {
 using namespace std;
 
 class Solution {
-	public:
-		vector<int> preorderTraversal(TreeNode *root) {
-			vector<int> res;
-			stack<TreeNode*> pstack;
+public:
+	vector<int> preorderTraversal(TreeNode *root) {
+		vector<int> res;
+		stack<TreeNode*> pstack;
 
-			if(root != NULL) pstack.push(root);
-			while(!pstack.empty()) {
-				TreeNode *tmp = pstack.top();
-				res.push_back(tmp->val);
-				pstack.pop();
-				if(tmp->right != NULL) pstack.push(tmp->right);
-				if(tmp->left != NULL) pstack.push(tmp->left);
-			}
-
-			return res;
+		if(root != NULL) pstack.push(root);
+		while(!pstack.empty()) {
+			TreeNode *tmp = pstack.top();
+			res.push_back(tmp->val);
+			pstack.pop();
+			if(tmp->right != NULL) pstack.push(tmp->right);
+			if(tmp->left != NULL) pstack.push(tmp->left);
 		}
+
+		return res;
+	}
 };
 
 TreeNode* createTree(int a[], int n)
