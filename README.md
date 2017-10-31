@@ -37,6 +37,9 @@
 
 ### 二叉树的遍历
 
+- binary_tree_preorder_traversal
+- binary_tree_inorder_traversal
+
 ### 二叉树的构建
 
 ### 二叉查找树
