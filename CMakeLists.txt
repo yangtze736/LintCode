@@ -26,6 +26,7 @@ add_executable (single_number_1 single_number_1.cc)
 
 ### 单链表
 add_executable (add_two_numbers add_two_numbers.cc)
+add_executable (binary_tree_inorder_traversal binary_tree_inorder_traversal.cc)
 
 ## 字符串
 
@@ -34,6 +35,8 @@ add_executable (add_two_numbers add_two_numbers.cc)
 ## 树
 
 ### 二叉树的遍历
+add_executable (binary_tree_preorder_traversal binary_tree_preorder_traversal.cc)
+add_executable (binary_tree_inorder_traversal binary_tree_inorder_traversal.cc)
 
 ### 二叉树的构建
 
