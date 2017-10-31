@@ -26,7 +26,6 @@ add_executable (single_number_1 single_number_1.cc)
 
 ### 单链表
 add_executable (add_two_numbers add_two_numbers.cc)
-add_executable (binary_tree_inorder_traversal binary_tree_inorder_traversal.cc)
 
 ## 字符串
 
