@@ -39,6 +39,8 @@
 
 - binary_tree_preorder_traversal
 - binary_tree_inorder_traversal
+- binary_tree_postorder_traversal
+- binary_tree_level_order_traversal
 
 ### 二叉树的构建
 

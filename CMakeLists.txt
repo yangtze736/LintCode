@@ -36,6 +36,8 @@ add_executable (add_two_numbers add_two_numbers.cc)
 ### 二叉树的遍历
 add_executable (binary_tree_preorder_traversal binary_tree_preorder_traversal.cc)
 add_executable (binary_tree_inorder_traversal binary_tree_inorder_traversal.cc)
+add_executable (binary_tree_postorder_traversal binary_tree_postorder_traversal.cc)
+add_executable (binary_tree_level_order_traversal binary_tree_level_order_traversal.cc)
 
 ### 二叉树的构建
 
