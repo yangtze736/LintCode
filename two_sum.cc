@@ -1,12 +1,14 @@
 /*
    Given an array of integers, find two numbers such that they add up to a specific target number.
-   The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Please note that your returned answers (both index1 and index2) are not zero-based.
+   The function twoSum should return indices of the two numbers such that they add up to the target, 
+   where index1 must be less than index2. Please note that your returned answers (both index1 and index2) are not zero-based.
 
    You may assume that each input would have exactly one solution. Input: numbers={2, 7, 11, 15}, target=9
 Output: index1=1, index2=2
 
 分析
-这个题很巧妙的用了map，因为是找两个数凑起来能是target, 所以遇到一个数，你就知道了它应该和谁去凑对，虽然不知道能凑对的这个数是否在array中存在又或者存在在什么地方。搞一个<number, index>的map, 记录每个数字出现的位置。逐个去检查数字，看看他要凑成对的那个数字是不是已经存在了即可。
+这个题很巧妙的用了map，因为是找两个数凑起来能是target, 所以遇到一个数，你就知道了它应该和谁去凑对，虽然不知道能凑对的这个数是否在array中存在又或者存在在什么地方。
+搞一个<number, index>的map, 记录每个数字出现的位置。逐个去检查数字，看看他要凑成对的那个数字是不是已经存在了即可。
 
  */ 
 
